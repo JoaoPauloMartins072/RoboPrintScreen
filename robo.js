@@ -4,22 +4,21 @@ console.log("rodando");
 async function robo(site) {
   const date = new Date();
 
-  const dataHora =
-    "(" +
-    date.getDate() +
-    "-" +
-    date.getMonth() +
-    "-" +
-    date.getFullYear() +
-    ")" +
-    date.getHours() +
-    ";" +
-    date
-      .getMinutes()
-      .toString()
-      .replace(/^(\d)$/, "0$1") +
-    ";" +
-    date.getSeconds();
+const dataHora =
+  date.getDate() +
+  '-' +
+  date.getMonth() +
+  '-' +
+  date.getFullYear() +
+  '-' +
+  date.getHours() +
+  '-' +
+  date
+    .getMinutes()
+    .toString()
+    .replace(/^(\d)$/, '0$1') +
+  '-' +
+  date.getSeconds();
 
   const browser = await puppeteer.launch({
     headless: true,
